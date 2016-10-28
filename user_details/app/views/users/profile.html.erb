@@ -1,0 +1,18 @@
+<h2>Profile details</h2>
+<table border="2px">
+	<tr>
+		<th>First_name</th>
+		<th>Last_name</th>
+		<th>Email</th>
+	</tr>
+
+<% @user.each do |user| %><br>
+	<tr>
+		<td><%= user.first_name %></td>
+		<td><%= user.last_name %></td>
+		<td><%= user.email %></td>
+		<td><%= link_to 'Edit and update', user_edit_path(user) %></td>
+	</tr>
+		
+<% end %>
+</table>
